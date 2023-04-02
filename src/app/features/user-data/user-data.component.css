@@ -1,0 +1,16 @@
+nz-card {
+  width: 80%;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border: solid 2px blue;
+}
+
+p {
+  font-size: 15px;
+}
+
+.post {
+  margin-bottom: 30px;
+  border: solid 1px red;
+}

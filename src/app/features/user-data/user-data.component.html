@@ -1,0 +1,38 @@
+<nz-card nzTitle="{{userData.name}}">
+  <nz-card-tab>
+    <nz-tabset nzSize="large">
+      <nz-tab nzTitle="Info" *ngIf="userData != ''">
+        <h3>Email: {{userData.email}}</h3>
+        <h3>Gender: {{userData.gender}}</h3>
+        <h3>Id: {{userData.id}}</h3>
+
+      <div *ngIf=" userTodos != ''">
+      <nz-tab nzTitle="Todos" *ngFor=" let todo of userTodos">
+        <h3>{{todo.title}}</h3>
+          <p>'{{todo.status}}'</p>
+          <br>
+      </nz-tab>
+      </div>
+      <nz-tab nzTitle="Todos" *ngIf=" userTodos == ''">
+        <h3>No todos yet</h3>
+      </nz-tab>
+      
+      <div *ngIf=" userPosts != ''">
+        <nz-tab nzTitle="Posts">
+          <div class="post" *ngFor=" let post of userPosts">
+            <h2>{{post.title}}</h2>
+            <p>{{post.body}}</p>
+            <button nz-button nzType="primary" (click)="getComments(post.id)">See comments</button>
+            <br>
+            <nz-comment *ngFor=" let comment of postComment">
+              <nz-comment-content *ngIf=" comment.post_id == post.id ">
+                <h3>{{comment.name}}</h3>
+                <p>{{comment.body}}</p>
+              </nz-comment-content>
+            </nz-comment>
+          </div>
+        </nz-tab>
+      </div>
+      <nz-tab nzTitle="Posts" *ngIf=" userPosts == ''">
+        <h3>No posts yet</h3>
+      </nz-tab>
