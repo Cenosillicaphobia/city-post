@@ -1,0 +1,8 @@
+h1 {
+  margin-top: 20px;
+  margin-bottom: -20px;
+  font-size: 60px;
+  font-family: 'Fasthand', cursive;
+  color: aliceblue;
+  text-shadow: 2px 2px rgb(24, 144, 255, 0.7);
+}

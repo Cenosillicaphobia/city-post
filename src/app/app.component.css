@@ -2,10 +2,22 @@
   text-align: center;
 }
 
-nz-header,
-nz-footer {
-  background: #7dbcea;
+nz-header {
+  background-image: url('../assets/img/skyline.jpeg');
+  background-repeat: no-repeat;
+  background-position-y: -30px;
+  background-size: 160%;
   color: #fff;
+  height: 105px;
+}
+
+nz-footer {
+  background-image: url('../assets/img/skyline.jpeg');
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: 150%;
+  color: #fff;
+  height: 100px;
 }
 
 nz-footer {
@@ -13,11 +25,11 @@ nz-footer {
 }
 
 nz-layout {
-  margin-bottom: 48px;
+  margin-bottom: 50px;
 }
 
-router-outlet {
-  margin: auto;
+.content {
+  height: 70vh;
 }
 
 nz-layout nz-layout,
