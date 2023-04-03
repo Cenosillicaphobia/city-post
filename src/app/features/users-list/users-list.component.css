@@ -1,22 +1,24 @@
-p {
-  margin: 0;
-  font-size: 12px;
+h3 {
+  font-size: 40px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.searchbar {
+  margin-bottom: 20px;
 }
 
 nz-card {
   margin-bottom: 20px;
 }
 
+p {
+  margin: 0;
+  font-size: 12px;
+}
+
 nz-pagination {
-  margin-bottom: 20px;
-}
-
-h3 {
-  font-size: 40px;
-  text-align: center;
-  margin: 10px;
-}
-
-.searchbar { 
+  margin: auto;
   margin-bottom: 20px;
 }

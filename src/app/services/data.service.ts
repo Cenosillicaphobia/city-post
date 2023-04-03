@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -44,6 +44,11 @@ export class DataService {
   //posts-list
   getPosts(page: number, perPages: number ){
     return this.http.get( this.baseLink + '/posts?page=' + page + '&per_page=' + perPages );
+  };
+
+  //Add user logic
+  addUser(user: any){
+    return this.http.post( this.baseLink + '/users', user, { observe: 'response', headers: this.setHeader()})
   };
  
 }

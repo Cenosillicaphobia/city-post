@@ -1,0 +1,40 @@
+h3 {
+  font-size: 40px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+form {
+  background-color: white;
+  border: solid 2px rgb(24, 144, 255, 0.3);
+  border-radius: 5px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+nz-form-item {
+  margin: 20px;
+}
+
+.first-item {
+  margin-top: 40px;
+}
+
+nz-select {
+  width: 100%;
+}
+
+p {
+  margin: auto;
+}
+
+button {
+  margin-bottom: 20px;
+}
+
+nz-alert {
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}

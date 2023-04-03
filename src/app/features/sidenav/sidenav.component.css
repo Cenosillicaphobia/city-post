@@ -1,3 +1,20 @@
-nz-menu-item {
-  width: 25%;
+.nz-menu {
+    background-color: white;
+}
+
+.item {
+    width: 25%;
+}
+
+button {
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 900px ){
+    .button-text {
+        display: none;
+    };
 }

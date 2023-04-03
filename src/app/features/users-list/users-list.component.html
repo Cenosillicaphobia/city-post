@@ -1,6 +1,6 @@
-<h3>Users List</h3>
+<h3 nz-col nzXs="20" nzMd="20" nzXl="20">Users List</h3>
 
-<nz-input-group class="searchbar" [nzSuffix]="suffixIconSearch" nz-col nzXs="20" nzMd="10" nzXl="7">
+<nz-input-group class="searchbar" [nzSuffix]="suffixIconSearch" nz-col nzXs="20" nzMd="18" nzXl="14" nzJustify="'center">
   <input type="text" [(ngModel)]="searchValue" (ngModelChange)="Search(searchValue)" nz-input placeholder="Search by name" />
 </nz-input-group>
 <ng-template #suffixIconSearch>
@@ -8,14 +8,14 @@
 </ng-template>
 
 <div nz-row [nzJustify]="'space-around'">
-<div nz-col nzXs="20" nzMd="10" nzXl="7" *ngFor=" let user of users">
-  <nz-card [nzHoverable]="true" nzTitle={{user.name}}>
-    <p class="mail">{{user.email}}</p>
-    <p>{{user.id}}</p>
-    <p>{{user.status}}</p>
-    <a routerLink="user-data/{{user.id}}">See More</a>
-  </nz-card>
-</div>
+  <div nz-col nzXs="20" nzMd="10" nzXl="7" *ngFor=" let user of users">
+    <nz-card [nzHoverable]="true" nzTitle={{user.name}}>
+      <p class="mail">{{user.email}}</p>
+      <p>{{user.id}}</p>
+      <p>{{user.status}}</p>
+      <a routerLink="user-data/{{user.id}}">See More</a>
+    </nz-card>
+  </div>
 </div>
 
-<nz-pagination [(nzPageIndex)]="pageIndex" [nzTotal]="50" (nzPageIndexChange)="getUsersData()"></nz-pagination>
+<nz-pagination nz-col nzXs="20" nzMd="20" nzXl="20" [(nzPageIndex)]="pageIndex" [nzTotal]="100" (nzPageIndexChange)="getUsersData()"></nz-pagination>

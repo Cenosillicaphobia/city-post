@@ -22,6 +22,10 @@ import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
 import { NzCommentModule } from 'ng-zorro-antd/comment';
+import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
+import { NzSelectModule } from 'ng-zorro-antd/select';
+import { NzAlertModule } from 'ng-zorro-antd/alert';
+
 
 import { HeaderComponent } from './features/header/header.component';
 import { FooterComponent } from './features/footer/footer.component';
@@ -29,6 +33,8 @@ import { SidenavComponent } from './features/sidenav/sidenav.component';
 import { UsersListComponent } from './features/users-list/users-list.component';
 import { UserDataComponent } from './features/user-data/user-data.component';
 import { PostsListComponent } from './features/posts-list/posts-list.component';
+import { CreateUserComponent } from './features/create-user/create-user.component';
+import { LoginComponent } from './features/login/login.component';
 
 registerLocaleData(en);
 
@@ -40,7 +46,9 @@ registerLocaleData(en);
     SidenavComponent,
     UsersListComponent,
     UserDataComponent,
-    PostsListComponent
+    PostsListComponent,
+    CreateUserComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +66,10 @@ registerLocaleData(en);
     NzPaginationModule,
     NzInputModule,
     NzTabsModule,
-    NzCommentModule
+    NzCommentModule,
+    NzToolTipModule,
+    NzSelectModule,
+    NzAlertModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }
