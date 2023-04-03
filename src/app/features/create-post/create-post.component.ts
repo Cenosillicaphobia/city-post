@@ -25,7 +25,7 @@ export class CreatePostComponent {
     this.post.title = formValue.value.title
     this.post.body = formValue.value.body
     this.dataService.createPost( formValue.value.id, this.post).subscribe( (response) =>{ alert('Your post has been generated!'), this.router.navigate(['posts-list'])},
-    (error) => { this.error = error.error.message});
+    (error) => { this.error = error.error[0].field + ' ' + error.error[0].message });
   }
 
 }

@@ -26,10 +26,7 @@ nz-footer {
 
 nz-layout {
   margin-bottom: 50px;
-}
-
-.content {
-  height: 70vh;
+  background-color: rgb(170, 231, 255);
 }
 
 nz-layout nz-layout,
