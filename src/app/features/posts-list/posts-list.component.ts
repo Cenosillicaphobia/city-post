@@ -33,7 +33,7 @@ export class PostsListComponent implements OnInit {
   }
 
   Search(searchValue:any){
-    this.dataService.getPosts(this.pageIndex, 24)
+    this.dataService.getPosts(this.pageIndex, 100)
     .subscribe(data => { 
       this.posts = data, 
       this.posts = this.posts.filter((response:any) => {

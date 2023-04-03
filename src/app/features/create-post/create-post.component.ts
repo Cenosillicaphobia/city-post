@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { DataService } from 'src/app/services/data.service';
 import { LogService } from 'src/app/services/log.service';
 
@@ -10,9 +11,7 @@ import { LogService } from 'src/app/services/log.service';
 })
 export class CreatePostComponent {
 
-  constructor ( private logService: LogService, private dataService: DataService){}
-
-  isLogged:any;
+  constructor ( private logService: LogService, private dataService: DataService, private router: Router){}
 
   error:any = null;
 
@@ -22,16 +21,11 @@ export class CreatePostComponent {
     body: ''
   }
 
-  ngOnInit(){
-    this.isLogged = this.logService.checkLog();
-  }
-
   createPost(formValue: NgForm){
     this.post.title = formValue.value.title
     this.post.body = formValue.value.body
-    this.dataService.createPost( localStorage.getItem('id'), this.post).subscribe( (response) =>{ alert('Your post has been generated!')},
-    (error) => { this.error = error.error.message}
-    )
+    this.dataService.createPost( formValue.value.id, this.post).subscribe( (response) =>{ alert('Your post has been generated!'), this.router.navigate(['posts-list'])},
+    (error) => { this.error = error.error.message});
   }
 
 }

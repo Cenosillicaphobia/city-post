@@ -25,7 +25,7 @@ export class UsersListComponent implements OnInit{
   }
 
   Search(searchValue:any){
-    this.dataService.getUsers(this.pageIndex, 24)
+    this.dataService.getUsers(this.pageIndex, 100)
     .subscribe(data => { 
       this.users = data, 
       this.users = this.users.filter((response:any) => {

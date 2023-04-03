@@ -3,7 +3,7 @@ nz-card {
   margin: auto;
   margin-top: 25px;
   margin-bottom: 25px;
-  border: solid 2px blue;
+  border: solid 2px rgb(24, 144, 255, 0.3);
 }
 
 p {
@@ -12,5 +12,4 @@ p {
 
 .post {
   margin-bottom: 30px;
-  border: solid 1px red;
 }

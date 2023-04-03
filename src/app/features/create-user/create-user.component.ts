@@ -10,8 +10,6 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class CreateUserComponent {
 
-  token: string = '';
-
   user: any  = {
     name: "",
     email: "",
@@ -25,10 +23,6 @@ export class CreateUserComponent {
   
   constructor( private dataService: DataService, private router: Router ){}
 
-  setToken(token = this.token){
-    localStorage.setItem('token', token)
-  }
-
   register( form: NgForm){
     this.user.name = form.value.name
     this.user.email = form.value.email
@@ -36,9 +30,8 @@ export class CreateUserComponent {
 
     this.dataService.addUser(this.user).subscribe((response) => {
       this.newUser = response.body,
-      localStorage.setItem('id', this.newUser.id),
-      alert( 'Hello ' + this.newUser.name + ' now you can create post and delete users, save your id: "' + this.newUser.id + '" to login later.'),
-      this.router.navigate(['']);
+      alert( 'New user generated, save the id: "' + this.newUser.id + '" to create posts'),
+      this.router.navigate(['/users-list']);
     }, (error) => { this.error = error.error[0].field + ' ' + error.error[0].message });
 
   };

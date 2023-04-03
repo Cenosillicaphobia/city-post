@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { DataService } from 'src/app/services/data.service';
 import { LogService } from 'src/app/services/log.service';
 
@@ -8,21 +9,15 @@ import { LogService } from 'src/app/services/log.service';
   templateUrl: './delete-user.component.html',
   styleUrls: ['./delete-user.component.css']
 })
-export class DeleteUserComponent implements OnInit{
+export class DeleteUserComponent {
 
-  constructor ( private logService: LogService, private dataService: DataService){}
-
-  isLogged:any;
+  constructor ( private logService: LogService, private dataService: DataService, private router: Router){}
 
   error:any = null;
 
-  ngOnInit(){
-    this.isLogged = this.logService.checkLog();
-  }
-
   deleteUser(form:NgForm){
     console.log(form.value.id),
-    this.dataService.deleteUser(form.value.id).subscribe( response => { alert ('User Deleted')},
+    this.dataService.deleteUser(form.value.id).subscribe( response => { alert ('User Deleted'), this.router.navigate(['/users-list'])},
     (error) => { this.error = error.error.message });
   }
 

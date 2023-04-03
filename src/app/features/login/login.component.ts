@@ -11,16 +11,9 @@ export class LoginComponent {
 
   constructor ( private router: Router){}
 
-  token: string = '';
-
-  setToken(token = this.token){
-    localStorage.setItem('token', token)
-  }
-
   login( form:NgForm){
-    localStorage.setItem('id', form.value.id),
-    alert('Welcome back! now you can create posts and delete users.'),
-    this.router.navigate(['']);
+    localStorage.setItem('token', form.value.token)
+    this.router.navigate(['users-list'])
   };
 
 }

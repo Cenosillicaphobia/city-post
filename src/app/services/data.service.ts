@@ -21,29 +21,29 @@ export class DataService {
 
   //users-list
   getUsers(page: number, perPages: number ){
-    return this.http.get( this.baseLink + '/users?page=' + page + '&per_page=' + perPages );
+    return this.http.get( this.baseLink + '/users?page=' + page + '&per_page=' + perPages, { headers: this.setHeader()});
   };
 
   //user-data
   getUserData(id: any){
-    return this.http.get( this.baseLink + '/users/' + id);
+    return this.http.get( this.baseLink + '/users/' + id, { headers: this.setHeader()});
   };
 
   getUserTodos(id: any){
-    return this.http.get( this.baseLink + '/users/' + id + '/todos');
+    return this.http.get( this.baseLink + '/users/' + id + '/todos', { headers: this.setHeader()});
   }
 
   getUserPosts(id: any){
-    return this.http.get( this.baseLink + '/users/' + id + '/posts');
+    return this.http.get( this.baseLink + '/users/' + id + '/posts', { headers: this.setHeader()});
   }
 
   getPostComments(id: any){
-    return this.http.get( this.baseLink + '/posts/' + id + '/comments');
+    return this.http.get( this.baseLink + '/posts/' + id + '/comments', { headers: this.setHeader()});
   }
 
   //posts-list
   getPosts(page: number, perPages: number ){
-    return this.http.get( this.baseLink + '/posts?page=' + page + '&per_page=' + perPages );
+    return this.http.get( this.baseLink + '/posts?page=' + page + '&per_page=' + perPages, { headers: this.setHeader()} );
   };
 
   //Add user

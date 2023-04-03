@@ -8,9 +8,9 @@ export class LogService {
 
   constructor( private router: Router ) {}
 
-  checkLog (){
-    if( localStorage.getItem('id') != null && localStorage.getItem('token') != null){ return true }
-    else { return false}
+  isAuthenticated(){
+    if( localStorage.getItem('token') != null){ return true}
+    else{ return false};
   }
 
   Logout(){
