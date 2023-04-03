@@ -1,0 +1,30 @@
+<h3>Delete User</h3>
+
+<nz-alert
+  *ngIf=" error != null"
+  nzType="error"
+  nzMessage="Error"
+  nzDescription="{{error}}"
+  nzShowIcon
+  nz-col nzXs="22" nzMd="18" nzXl="16"
+></nz-alert>
+
+<nz-alert
+  *ngIf=" isLogged === false"
+  nzType="warning"
+  nzMessage="Warning"
+  nzDescription="You need to be logged for submit the form"
+  nzShowIcon
+  nz-col nzXs="22" nzMd="18" nzXl="16"
+></nz-alert>
+
+<form nz-form nz-col nzXs="22" nzMd="18" nzXl="16" #loginform="ngForm" (ngSubmit)="deleteUser(loginform)">
+
+  <nz-form-item class="first-item">
+    <nz-form-label [nzSpan]="6" nzFor="name">ID</nz-form-label>
+    <nz-form-control [nzSpan]="14">
+      <input nz-input name="id" type="text" ngModel required>
+    </nz-form-control>
+  </nz-form-item>
+
+  <button nz-button nzType="primary" [disabled]="loginform.invalid || isLogged === false" type="submit">SUBMIT</button>

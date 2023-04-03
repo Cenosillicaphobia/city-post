@@ -5,6 +5,12 @@ h3 {
   margin-bottom: 20px;
 }
 
+nz-alert {
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
 form {
   background-color: white;
   border: solid 2px rgb(24, 144, 255, 0.3);
@@ -21,20 +27,6 @@ nz-form-item {
   margin-top: 40px;
 }
 
-nz-select {
-  width: 100%;
-}
-
-p {
-  margin: auto;
-}
-
 button {
   margin-bottom: 20px;
-}
-
-nz-alert {
-  margin: auto;
-  margin-top: 25px;
-  margin-bottom: 25px;
 }

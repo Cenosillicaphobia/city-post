@@ -35,6 +35,8 @@ import { UserDataComponent } from './features/user-data/user-data.component';
 import { PostsListComponent } from './features/posts-list/posts-list.component';
 import { CreateUserComponent } from './features/create-user/create-user.component';
 import { LoginComponent } from './features/login/login.component';
+import { DeleteUserComponent } from './features/delete-user/delete-user.component';
+import { CreatePostComponent } from './features/create-post/create-post.component';
 
 registerLocaleData(en);
 
@@ -48,7 +50,9 @@ registerLocaleData(en);
     UserDataComponent,
     PostsListComponent,
     CreateUserComponent,
-    LoginComponent
+    LoginComponent,
+    DeleteUserComponent,
+    CreatePostComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,24 @@
-<p>login works!</p>
+<h3>Login</h3>
+
+<a routerLink="/create-user"><nz-alert nz-col nzXs="18" nzMd="10" nzXl="6" nzType="info" nzMessage="If you don't have an account, click here."></nz-alert></a>
+
+<form nz-form nz-col nzXs="22" nzMd="18" nzXl="16" #loginform="ngForm" (ngSubmit)="login(loginform)">
+
+  <nz-form-item class="first-item">
+    <nz-form-label [nzSpan]="6" nzFor="name">ID</nz-form-label>
+    <nz-form-control [nzSpan]="14">
+      <input nz-input name="id" type="text" ngModel required>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzSpan]="6" nzFor="token">Token</nz-form-label>
+    <nz-form-control [nzSpan]="14">
+      <input nz-input name="token" type="text" [(ngModel)]="token" (blur)="setToken()" required minlength="64" maxlength="64">
+    </nz-form-control>
+  </nz-form-item>
+
+  <button nz-button nzType="primary" [disabled]="loginform.invalid" type="submit">SUBMIT</button>
+
+</form>
+

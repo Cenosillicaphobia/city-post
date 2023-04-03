@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LogService } from 'src/app/services/log.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./sidenav.component.css']
 })
 export class SidenavComponent {
+
+  constructor ( private logService: LogService){}
+
+  Logout(){
+    this.logService.Logout()
+  }
 
 }

@@ -46,9 +46,19 @@ export class DataService {
     return this.http.get( this.baseLink + '/posts?page=' + page + '&per_page=' + perPages );
   };
 
-  //Add user logic
+  //Add user
   addUser(user: any){
     return this.http.post( this.baseLink + '/users', user, { observe: 'response', headers: this.setHeader()})
+  };
+
+  //Delete user
+  deleteUser(userId: any){
+    return this.http.delete( this.baseLink + '/users/' + userId, { observe: 'response', headers: this.setHeader()})
+  };
+
+  //Create post
+  createPost(id:any, post:any){
+    return this.http.post( this.baseLink + '/users/' + id + '/posts', post, { observe: 'response', headers: this.setHeader()})
   };
  
 }

@@ -6,16 +6,16 @@
   <li class="item" nz-submenu nzTitle="Posts" nzIcon="unordered-list">
     <ul>
       <li nz-menu-item routerLink="posts-list">Posts List</li>
-      <li nz-menu-item>Create Post</li>
+      <li nz-menu-item routerLink="create-post">Create Post</li>
     </ul>
   <li class="item" nz-submenu nzTitle="Tools" nzIcon="setting">
     <ul>
-      <li nz-menu-item>Login</li>
+      <li nz-menu-item routerLink="login">Login</li>
       <li nz-menu-item routerLink="create-user">Create User</li>
-      <li nz-menu-item>Delete User</li>
+      <li nz-menu-item routerLink="delete-user">Delete User</li>
     </ul>
   </li>
-  <button nz-menu-item nz-button nzType="primary">
+  <button nz-menu-item nz-button nzType="primary" (click)="Logout()">
     <span nz-icon nzType="logout" nzTheme="outline"></span>
     <span class="button-text">logout</span>
   </button>
