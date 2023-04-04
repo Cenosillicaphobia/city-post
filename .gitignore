@@ -40,6 +40,5 @@ Thumbs.db
 .vscode
 .angular
 .editorconfig
-environments.ts
 .firebase
 .firebaserc
