@@ -20,6 +20,8 @@ Se invece vuoi testare il progetto in locale, scarica tutti i file da questa rep
 
 ## Features 
  
+(E' stato implementato uno 'Unit Testing' di tutti i service ed i componenti, raggiungendo una global coverage superiore al 60%) 
+
 Il Login salva il tuo token il locale per richiamarlo nell'header durante tutte le chiamate http e ti porta direttamenta nella users-list page. 
 L'accesso alle altre pagine è protetto da un 'AuthGuard' non sarà quindi possibile visualizzarle fino alla corretta esecuzione del Login. 
 A seguito del login si viene automaticamente reindirizzati all'interno della users-list page. 
