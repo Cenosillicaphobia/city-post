@@ -12,7 +12,7 @@
 
 ## Inizializzare il progetto:
 
-[clicca qui](*****) per accedere alla pagina web del progetto, ti verrà chiesto di inserire il tuo token (se ancora non l'hai fatto puoi generarne uno [qui](https://gorest.co.in/my-account/access-tokens)), sarai poi libero di visualizzare tutte le informazioni ed utilizzare tutte le funzionalità.
+[clicca qui](https://city-post-4cbfd.web.app) per accedere alla pagina web del progetto, ti verrà chiesto di inserire il tuo token (se ancora non l'hai fatto puoi generarne uno [qui](https://gorest.co.in/my-account/access-tokens)), sarai poi libero di visualizzare tutte le informazioni ed utilizzare tutte le funzionalità.
 
 Se invece vuoi testare il progetto in locale, scarica tutti i file da questa repository, lancia il comando 'npm install' per installare tutti i pacchetti presenti nel file 'package.json' e successivamente lancia il comando 'ng serve --open' per aprire il progetto in locale. 
  

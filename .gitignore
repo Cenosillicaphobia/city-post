@@ -41,3 +41,5 @@ Thumbs.db
 .angular
 .editorconfig
 environments.ts
+.firebase
+.firebaserc
