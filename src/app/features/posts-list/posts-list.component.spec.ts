@@ -1,6 +1,9 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ComponentFixture, fakeAsync, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { PostsListComponent } from './posts-list.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
+import { Observable } from 'rxjs';
 
 describe('PostsListComponent', () => {
   let component: PostsListComponent;
@@ -8,7 +11,9 @@ describe('PostsListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PostsListComponent ]
+      declarations: [ PostsListComponent ],
+      imports: [ HttpClientTestingModule ],
+      schemas: [ NO_ERRORS_SCHEMA ]
     })
     .compileComponents();
 
@@ -20,4 +25,5 @@ describe('PostsListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
 });

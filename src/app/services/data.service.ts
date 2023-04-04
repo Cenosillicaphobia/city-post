@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'environments';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ export class DataService {
 
   constructor( private http: HttpClient ) { }
 
-  baseLink = 'https://gorest.co.in/public/v2';
+  baseLink = environment.BASE_LINK;
 
   setHeader(){
     let header = {
