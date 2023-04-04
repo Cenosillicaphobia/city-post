@@ -10,6 +10,7 @@
 <div nz-row [nzJustify]="'space-around'">
   <div nz-col nzXs="20" nzMd="10" nzXl="7" *ngFor=" let user of users">
     <nz-card [nzHoverable]="true" nzTitle={{user.name}}>
+      <p class="card-dot" [ngStyle]="{ 'background': user.status == 'inactive' ? 'white' : 'rgb(24, 144, 255)' }"></p>
       <p class="mail">{{user.email}}</p>
       <p>{{user.id}}</p>
       <p>{{user.status}}</p>

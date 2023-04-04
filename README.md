@@ -1,27 +1,58 @@
-# CityPost
+# City Post 
+ 
+#### Progetto realizzato in Angular per Ntt-Data, utilizzando le REST API fornite da [GoRest](https://gorest.co.in/)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
+--- 
+ 
+- Inizializzare il progetto
+- Features
+- Grafica 
 
-## Development server
+--- 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Inizializzare il progetto:
 
-## Code scaffolding
+[clicca qui](*****) per accedere alla pagina web del progetto, ti verrà chiesto di inserire il tuo token (se ancora non l'hai fatto puoi generarne uno [qui](https://gorest.co.in/my-account/access-tokens)), sarai poi libero di visualizzare tutte le informazioni ed utilizzare tutte le funzionalità.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Se invece vuoi testare il progetto in locale, scarica tutti i file da questa repository, lancia il comando 'npm install' per installare tutti i pacchetti presenti nel file 'package.json' e successivamente lancia il comando 'ng serve --open' per aprire il progetto in locale. 
+ 
+--- 
 
-## Build
+## Features 
+ 
+Il Login salva il tuo token il locale per richiamarlo nell'header durante tutte le chiamate http e ti porta direttamenta nella users-list page. 
+L'accesso alle altre pagine è protetto da un 'AuthGuard' non sarà quindi possibile visualizzarle fino alla corretta esecuzione del Login. 
+A seguito del login si viene automaticamente reindirizzati all'interno della users-list page. 
+ 
+La users-list mostra un elenco di tutti gli utenti presenti a sistema e le loro relative info principali.
+E' possibile effettuare ricerche e scorrendo verso il termine della pagina è possibile passare a quella successiva o ad una pagina specifica.
+Cliccando su 'See More' si accede alla pagina user-data. 
+ 
+Nella pagina user-data è possibile visualizzare tutte le informazioni disponibili relative all'utente selezionato, quali:
+- le sue info personali 
+- la sua lista 'todos' 
+- i post pubblicati con possibilità di visualizzzare i relativi commenti 
+Per accedere all'elenco di tutti i post presenti a sistema è necessario cliccare sulla voce 'post/posts list' del menù. 
+ 
+La posts-list mostra un elenco di tutti post presenti a sistema con la possibilità di visualizzare i loro relativi commenti.
+E' possibile effettuare ricerche e scorrendo verso il termine della pagina è possibile passare a quella successiva o ad una pagina specifica.  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Dal menù è inoltre possibile ragiungere le seguenti pagine:
+- create-post, nella quale è possibile creare un post di un determinato utente.
+- create-user, nella quale è possibile aggiungere un nuovo utente. 
+- delete-user, nella quale è possibile eliminare un utente.
+Tutti i form presenti nelle pagine sono 'Template Driven Forms', non sarà quindi possibile effettuare il Submit fino a quando il form non riterrà completati correttamente tutti i campi richiesti. 
+Qualora il form consenta l'invio ma i dati non siano corretti, verrà visulizzato  sopra il form un messaggio di 'warning' con una breve descrizione del problema riportato dal database. 
+ 
+Attraverso il tasto di 'Logout' del menù si verrà riportati alla pagina di login ed il token verrà rimosso dallo storage locale. 
+ 
+--- 
+ 
+## Grafica 
+ 
+Il progetto è stato interamente relizzato attraverso l'utilizzo dello 'UI KIT Nz-Zorro' aggiungendo tramite css alcune mie personalizzazioni. 
+L'idea è stata quella di creare un interfaccia il più semplice e pulita possibile con l'aggiunta di pochi piccoli particolari che la rendessero chiara ma originale. 
+ 
+--- 
+ 
+Progetto realizzato da: **Andrea Tommasini**.
