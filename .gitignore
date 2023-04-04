@@ -38,7 +38,3 @@ testem.log
 Thumbs.db
 
 .vscode
-.angular
-.editorconfig
-.firebase
-.firebaserc
