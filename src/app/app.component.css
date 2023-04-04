@@ -24,6 +24,10 @@ nz-footer {
   line-height: 1.5;
 }
 
+nz-content {
+  min-height: 70vh;
+}
+
 nz-layout {
   margin-bottom: 50px;
   background-color: rgb(170, 231, 255);

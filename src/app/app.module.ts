@@ -8,8 +8,9 @@ import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoadingInterceptor } from './services/loader/loading.interceptor';
 
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
@@ -37,6 +38,7 @@ import { CreateUserComponent } from './features/create-user/create-user.componen
 import { LoginComponent } from './features/login/login.component';
 import { DeleteUserComponent } from './features/delete-user/delete-user.component';
 import { CreatePostComponent } from './features/create-post/create-post.component';
+import { SpinnerComponent } from './features/spinner/spinner.component';
 
 registerLocaleData(en);
 
@@ -52,7 +54,8 @@ registerLocaleData(en);
     CreateUserComponent,
     LoginComponent,
     DeleteUserComponent,
-    CreatePostComponent
+    CreatePostComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -76,7 +79,8 @@ registerLocaleData(en);
     NzAlertModule
   ],
   providers: [
-    { provide: NZ_I18N, useValue: en_US }
+    { provide: NZ_I18N, useValue: en_US },
+    { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })
