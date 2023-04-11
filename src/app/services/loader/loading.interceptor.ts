@@ -12,13 +12,13 @@ import { LoaderService } from './loader.service';
 @Injectable()
 export class LoadingInterceptor implements HttpInterceptor {
 
-  private totalRequests = 0;
+  totalRequests :number = 0;
 
   constructor(
     private loadingService: LoaderService
   ) {}
 
-  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+  intercept(request: HttpRequest<unknown>, next: any){
     this.totalRequests++;
     this.loadingService.setLoading(true);
     return next.handle(request).pipe(

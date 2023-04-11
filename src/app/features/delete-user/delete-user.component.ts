@@ -16,7 +16,6 @@ export class DeleteUserComponent {
   error:any = null;
 
   deleteUser(form:NgForm){
-    console.log(form.value.id),
     this.dataService.deleteUser(form.value.id).subscribe( response => { alert ('User Deleted'), this.router.navigate(['/users-list'])},
     (error) => { this.error = error.error.message });
   }
